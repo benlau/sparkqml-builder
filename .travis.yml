@@ -13,5 +13,6 @@ before_install:
   - go get qpm.io/qpm
   - find $GOPATH
 script:
-  - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; ./build-osx.sh; fi
+  - echo $TRAVIS_OS_NAME
+  - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then ./build-osx.sh; fi
 
