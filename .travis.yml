@@ -12,13 +12,6 @@ before_install:
   - export PATH=`pwd`/gosrc/bin:$PATH
   - go get qpm.io/qpm
   - find $GOPATH
-  - sh -e /etc/init.d/xvfb start
 script:
-  - git clone https://github.com/benlau/qtci.git
-  - source qtci/path.env
-  - ./qtci/env/qt-5.7
-  - source qt-5.7.env
-  - mkdir build
-  - cd build
-  - run-unittests ../tests/sparkqmltests/sparktests.pro
+  - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; ./build-osx.sh; fi
 
