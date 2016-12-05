@@ -17,4 +17,5 @@ script:
   - git clone https://github.com/benlau/qtci.git
   - source qtci/path.env
   - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then ./build-osx.sh; fi
+  - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then ./build-linux.sh; fi
 

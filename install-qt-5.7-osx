@@ -10,7 +10,7 @@ DOWNLOAD_URL=https://download.qt.io/archive/qt/5.7/5.7.0/qt-opensource-mac-x64-c
 INSTALLER=`basename $DOWNLOAD_URL`
 INSTALLER_NAME=${INSTALLER%.*}
 ENVFILE=qt-5.7.0-osx.env
-APPFILE= /Volumes/${INSTALLER_NAME}/${INSTALLER_NAME}.app/Contents/MacOS/${INSTALLER}
+APPFILE=/Volumes/${INSTALLER_NAME}/${INSTALLER_NAME}.app/Contents/MacOS/${INSTALLER}
 echo $INSTALLER_NAME
 echo $APPFILE
 
