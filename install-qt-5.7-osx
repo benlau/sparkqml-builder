@@ -1,16 +1,23 @@
 #!/bin/sh
+# Reference:
+#   https://github.com/musescore/MuseScore/blob/master/build/travis/job_macos/install.sh
 
 echo Downloading Qt
 set -v
 set -e
 
-INSTALLER=qt-opensource-mac-x64-clang-5.7.0.dmg
+DOWNLOAD_URL=https://download.qt.io/archive/qt/5.7/5.7.0/qt-opensource-mac-x64-clang-5.7.0.dmg
+INSTALLER=`basename $DOWNLAOD_URL`
+INSTALLER_PATH=${INSTALLER%.*}
 ENVFILE=qt-5.7.0-osx.env
-wget -c https://download.qt.io/archive/qt/5.7/5.7.0/qt-opensource-mac-x64-clang-5.7.0.dmg
+APPFILE= /Volumes/${INSTALLER_PATH}/${INSTALLER_PATH}.app/Contents/MacOS/${INSTALLER}
+echo $INSTALLER_PATH
+
+wget -c $DOWNLOAD_URL
 hdiutil mount ${INSTALLER}
 ls /Volumes
 echo Installing Qt
-extract-qt-installer $PWD/$INSTALLER $PWD/Qt
+extract-qt-installer $APPFILE $PWD/Qt
 
 echo Create $ENVFILE
 cat << EOF > $ENVFILE
