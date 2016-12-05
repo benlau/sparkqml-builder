@@ -3,5 +3,5 @@
 set -v
 set -e
 
-./qt-5.7-osx
+./install-qt-5.7-osx
 
