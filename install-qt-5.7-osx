@@ -7,11 +7,12 @@ set -v
 set -e
 
 DOWNLOAD_URL=https://download.qt.io/archive/qt/5.7/5.7.0/qt-opensource-mac-x64-clang-5.7.0.dmg
-INSTALLER=`basename $DOWNLAOD_URL`
-INSTALLER_PATH=${INSTALLER%.*}
+INSTALLER=`basename $DOWNLOAD_URL`
+INSTALLER_NAME=${INSTALLER%.*}
 ENVFILE=qt-5.7.0-osx.env
-APPFILE= /Volumes/${INSTALLER_PATH}/${INSTALLER_PATH}.app/Contents/MacOS/${INSTALLER}
-echo $INSTALLER_PATH
+APPFILE= /Volumes/${INSTALLER_NAME}/${INSTALLER_NAME}.app/Contents/MacOS/${INSTALLER}
+echo $INSTALLER_NAME
+echo $APPFILE
 
 wget -c $DOWNLOAD_URL
 hdiutil mount ${INSTALLER}
