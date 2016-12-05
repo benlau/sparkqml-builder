@@ -1,0 +1,13 @@
+#!/bin/sh
+
+echo Downloading Qt
+INSTALLER=qt-opensource-mac-x64-clang-5.7.0.dmg
+ENVFILE=qt-5.7.0-osx.env
+wget -c https://download.qt.io/archive/qt/5.7/5.7.0/qt-opensource-mac-x64-clang-5.7.0.dmg
+echo Installing Qt
+extract-qt-installer $PWD/$INSTALLER $PWD/Qt
+
+echo Create $ENVFILE
+cat << EOF > $ENVFILE
+export PATH=$PWD/Qt/5.7/clang/bin:$PATH
+EOF

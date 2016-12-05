@@ -3,6 +3,5 @@
 set -v
 set -e
 
-git clone https://github.com/benlau/qtci.git
-source qtci/path.env
+./qt-5.7-osx
 
