@@ -5,6 +5,6 @@ set -e
 
 ./install-qt-5.7-osx
 
-source ./qt-5.7-osx.env
+source ./qt-5.7.0-osx.env
 
 ./build-app.sh
