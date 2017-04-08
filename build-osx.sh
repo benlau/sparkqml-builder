@@ -9,9 +9,7 @@ source ./qt-5.7.0-osx.env
 
 ./build-app.sh
 
-pwd
-APP=`find . -name '*.app'`
-echo $APP
+APP=build/sparkqml/SparkQML.app
 macdeployqt $APP
 npm install -g appdmg
 appdmg dmg.json SparkQML.dmg

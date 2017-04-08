@@ -4,7 +4,7 @@ set -e
 set -v
 
 export BUILDDIR=`pwd`/build/linuxdeployqt
-mkdir $BUILDDIR
+mkdir -p $BUILDDIR
 cd $BUILDDIR
 git clone https://github.com/probonopd/linuxdeployqt.git
 qmake
