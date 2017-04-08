@@ -7,7 +7,7 @@ sudo add-apt-repository "deb http://us.archive.ubuntu.com/ubuntu vivid main univ
 sudo apt-get update
 sudo apt-get install patchelf
 
-./qtci/env/qt-5.7
+./qtci/recipes/qt-5.7
 
 cat ./qt-5.7.env
 . ./qt-5.7.env
