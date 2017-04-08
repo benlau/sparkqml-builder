@@ -12,3 +12,4 @@ cat ./qt-5.7.env
 
 ./build-linuxdeployqt.sh
 ./build-app.sh
+

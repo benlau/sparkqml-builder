@@ -1,0 +1,10 @@
+
+{
+  "title": "SparkQML",
+  "icon": "./sparkqml/app/sparkqml/sparkqml.icns",
+  "icon-size": 80,
+  "contents": [
+    { "x": 300, "y": 100, "type": "link", "path": "/Applications" },
+    { "x": 100, "y": 100, "type": "file", "path": "sparkqml/app/sparkqml/SparkQML.app" }
+  ]
+}
