@@ -6,6 +6,7 @@ set -v
 sudo add-apt-repository "deb http://us.archive.ubuntu.com/ubuntu vivid main universe"
 sudo apt-get update
 sudo apt-get install patchelf
+sudo apt-get install libgstreamer-plugins-base0.10-0
 
 ROOTDIR=`pwd`
 ./qtci/recipes/qt-5.7
