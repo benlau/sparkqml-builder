@@ -25,4 +25,4 @@ ldd $BUILDDIR/SparkQML
 dpkg -L libgstreamer-plugins-base1.0-0
 ls /usr/lib/x86_64-linux-gnu/libgstaudio-*
 
-LD_LIBRARY_PATH=/usr/lib/x86_64-linux-gnu/:/usr/lib/x86_64-linux-gnu/pulseaudio linuxdeployqt $BUILDDIR/SparkQML -appimage -qmldir=$SRCDIR
+LD_LIBRARY_PATH=/usr/lib/x86_64-linux-gnu/:/usr/lib/x86_64-linux-gnu/pulseaudio linuxdeployqt $BUILDDIR/SparkQML -verbose=2 -bundle-non-qt-libs -appimage -qmldir=$SRCDIR
