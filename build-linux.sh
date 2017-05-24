@@ -14,7 +14,8 @@ cat ./qt-5.7.env
 
 which qmake
 
-./build-linuxdeployqt.sh
+#./build-linuxdeployqt.sh
+./install-linuxdeployqt.sh
 ./build-app.sh
 
 cd $SRCDIR
