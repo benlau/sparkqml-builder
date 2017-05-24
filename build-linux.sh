@@ -15,8 +15,10 @@ cat ./qt-5.7.env
 
 which qmake
 
-find . -name "libgstaudiodecoder.so"
+#find . -name "libgstaudiodecoder.so"
 ldd ./Qt/5.7/gcc_64/plugins/mediaservice/libgstaudiodecoder.so
+
+apt-cache search libgstreamer-plugins-base0.10-0
 
 #./build-linuxdeployqt.sh
 ./install-linuxdeployqt.sh
@@ -26,7 +28,8 @@ cd $SRCDIR
 ls
 ldd $BUILDDIR/SparkQML
 
-dpkg -L libgstreamer-plugins-base1.0-0
+dpkg -L libgstreamer-plugins-base0.10-0
+
 ls /usr/lib/x86_64-linux-gnu/libgstaudio-*
 
 
