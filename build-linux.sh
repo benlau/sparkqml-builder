@@ -12,6 +12,8 @@ sudo apt-get install patchelf
 cat ./qt-5.7.env
 . ./qt-5.7.env
 
+which qmake
+
 ./build-linuxdeployqt.sh
 ./build-app.sh
 
