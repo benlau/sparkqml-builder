@@ -18,7 +18,7 @@ which qmake
 ./build-app.sh
 
 cd $SRCDIR
+ls
 ldd $BUILDDIR/SparkQML
 dpkg -L libpulse0
-
 LD_LIBRARY_PATH=/usr/lib/x86_64-linux-gnu/pulseaudio linuxdeployqt $BUILDDIR/SparkQML -appimage -qmldir=$SRCDIR
