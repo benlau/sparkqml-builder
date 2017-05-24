@@ -16,7 +16,7 @@ cat ./qt-5.7.env
 which qmake
 
 find . -name "libgstaudiodecoder.so"
-
+ldd ./Qt/5.7/gcc_64/plugins/mediaservice/libgstaudiodecoder.so
 
 #./build-linuxdeployqt.sh
 ./install-linuxdeployqt.sh
