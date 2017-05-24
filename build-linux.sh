@@ -20,5 +20,8 @@ which qmake
 cd $SRCDIR
 ls
 ldd $BUILDDIR/SparkQML
-dpkg -L libpulse0
-LD_LIBRARY_PATH=/usr/lib/x86_64-linux-gnu/pulseaudio linuxdeployqt $BUILDDIR/SparkQML -appimage -qmldir=$SRCDIR
+
+dpkg -L libgstreamer-plugins-base1.0-0
+ls /usr/lib/x86_64-linux-gnu/libgstaudio-*
+
+LD_LIBRARY_PATH=/usr/lib/x86_64-linux-gnu/:/usr/lib/x86_64-linux-gnu/pulseaudio linuxdeployqt $BUILDDIR/SparkQML -appimage -qmldir=$SRCDIR
