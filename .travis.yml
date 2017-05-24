@@ -9,7 +9,7 @@ addons:
   - apt:
     packages:
     - patchelf
-    - libgstreamer-plugins-base1.0-0
+    - libgstreamer-plugins-base0.10-0
 env:
   - DISPLAY=:99.0
 compiler:
