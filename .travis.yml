@@ -2,7 +2,7 @@ language : cpp
 sudo: true
 dist: trusty
 sudo: required
-os: 
+os:
   - linux
   - osx
 env:
@@ -18,6 +18,11 @@ script:
   - echo $TRAVIS_OS_NAME
   - git clone https://github.com/benlau/qtci.git
   - source qtci/path.env
+  - export SRCDIR=`pwd`/sparkqml/app/sparkqml
+  - export BUILDDIR=`pwd`/build/sparkqml
+  - export BINDIR=`pwd`/bin
+  - mkdir -p $BINDIR
+  - export PATH=$BINDIR:$PATH
   - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then ./build-osx.sh; fi
   - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then ./build-linux.sh; fi
 
