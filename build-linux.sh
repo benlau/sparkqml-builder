@@ -16,22 +16,17 @@ cat ./qt-5.7.env
 
 which qmake
 
-#find . -name "libgstaudiodecoder.so"
-ldd ./Qt/5.7/gcc_64/plugins/mediaservice/libgstaudiodecoder.so
-
-apt-cache search libgstreamer-plugins-base0.10-0
 
 #./build-linuxdeployqt.sh
 ./install-linuxdeployqt.sh
 ./build-app.sh
 
+cd $BUILDDIR
 cd $SRCDIR
 ls
 ldd $BUILDDIR/SparkQML
 
-dpkg -L libgstreamer-plugins-base0.10-0
+find $BUILDDIR \( -name "moc_*" -or -name "*.o" -or -name "qrc_*" -or -name "Makefile*" -or -name "*.a" \) -exec rm {} \;
+cp $SRCDIR/*.desktop .
 
-ls /usr/lib/x86_64-linux-gnu/libgstaudio-*
-
-
-LD_LIBRARY_PATH=/usr/lib/x86_64-linux-gnu/:/usr/lib/x86_64-linux-gnu/pulseaudio linuxdeployqt $BUILDDIR/SparkQML -verbose=2 -bundle-non-qt-libs -appimage -qmldir=$SRCDIR
+LD_LIBRARY_PATH=/usr/lib/x86_64-linux-gnu/:/usr/lib/x86_64-linux-gnu/pulseaudio linuxdeployqt $BUILDDIR/SparkQML -bundle-non-qt-libs -appimage -qmldir=$SRCDIR
