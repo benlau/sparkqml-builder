@@ -17,4 +17,4 @@ which qmake
 ./build-linuxdeployqt.sh
 ./build-app.sh
 
-linuxdeployqt -appimage -qmldir $SRCDIR $BUILDDIR/sparkqml
+linuxdeployqt -appimage -qmldir $SRCDIR $BUILDDIR/SparkQML
