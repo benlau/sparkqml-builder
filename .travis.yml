@@ -11,8 +11,7 @@ addons:
     - patchelf
     - libgstreamer-plugins-base0.10-0
   - artifacts:
-    - paths:
-      - $HOME/artifacts
+    - debug: true
 env:
   - DISPLAY=:99.0
 compiler:
