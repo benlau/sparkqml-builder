@@ -4,12 +4,15 @@ dist: trusty
 sudo: required
 os:
   - linux
-#  - osx
+  - osx
 addons:
   - apt:
     packages:
     - patchelf
     - libgstreamer-plugins-base0.10-0
+  - artifacts: true
+    - paths:
+      - $HOME/artifacts
 env:
   - DISPLAY=:99.0
 compiler:
@@ -26,6 +29,7 @@ script:
   - export SRCDIR=`pwd`/sparkqml/app/sparkqml
   - export BUILDDIR=`pwd`/build/sparkqml
   - export BINDIR=`pwd`/bin
+  - mkdir -p $ROOTDIR/artifacts
   - mkdir -p $BINDIR
   - export PATH=$BINDIR:$PATH
   - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then ./build-osx.sh; fi

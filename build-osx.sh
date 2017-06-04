@@ -13,4 +13,4 @@ APP=build/sparkqml/SparkQML.app
 macdeployqt $APP
 npm install -g appdmg
 appdmg dmg.json SparkQML.dmg
-
+cp SparkQML.dmg $ROOTDIR/artifacts
