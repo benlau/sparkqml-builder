@@ -32,4 +32,4 @@ script:
   - export PATH=$BINDIR:$PATH
   - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then ./build-osx.sh; fi
   - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then ./build-linux.sh; fi
-
+  - git ls-files -o | tr "\n" ":"
