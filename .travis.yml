@@ -10,7 +10,7 @@ addons:
     packages:
     - patchelf
     - libgstreamer-plugins-base0.10-0
-  - artifacts: true
+  - artifacts:
     - paths:
       - $HOME/artifacts
 env:
