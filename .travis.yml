@@ -26,10 +26,10 @@ script:
   - echo $TRAVIS_OS_NAME
   - git clone https://github.com/benlau/qtci.git
   - source qtci/path.env
+  - export ROOTDIR=`pwd`
   - export SRCDIR=`pwd`/sparkqml/app/sparkqml
   - export BUILDDIR=`pwd`/build/sparkqml
   - export BINDIR=`pwd`/bin
-  - mkdir -p $ROOTDIR/artifacts
   - mkdir -p $BINDIR
   - export PATH=$BINDIR:$PATH
   - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then ./build-osx.sh; fi
