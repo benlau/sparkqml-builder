@@ -4,7 +4,7 @@ dist: trusty
 sudo: required
 os:
   - linux
-#  - osx
+  - osx
 addons:
   - apt:
     packages:
@@ -35,5 +35,6 @@ script:
   - export ARTIFACTS_PATHS=$ROOTDIR/artifacts
   - curl -sL https://raw.githubusercontent.com/travis-ci/artifacts/master/install | bash
   - ls $ARTIFACTS_PATHS
+  - export ARTIFACTS_TARGET_PATHS="artifacts"
   - artifacts upload
 
