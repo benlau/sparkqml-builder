@@ -16,8 +16,6 @@ cat ./qt-5.7.env
 
 which qmake
 
-
-#./build-linuxdeployqt.sh
 ./install-linuxdeployqt.sh
 ./build-app.sh
 
@@ -33,4 +31,4 @@ LD_LIBRARY_PATH=/usr/lib/x86_64-linux-gnu/:/usr/lib/x86_64-linux-gnu/pulseaudio 
 ls
 mkdir -p $ROOTDIR/artifacts
 cp Application-x86_64.AppImage $ROOTDIR/artifacts/SparkQML.AppImage
-
+md5sum $ROOTDIR/artifacts/SparkQML.AppImage
