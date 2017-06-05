@@ -4,7 +4,7 @@ dist: trusty
 sudo: required
 os:
   - linux
-  - osx
+#  - osx
 addons:
   - apt:
     packages:
@@ -33,6 +33,7 @@ script:
   - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then ./build-osx.sh; fi
   - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then ./build-linux.sh; fi
   - export ARTIFACTS_PATHS=$ROOTDIR/artifacts
+  - curl -sL https://raw.githubusercontent.com/travis-ci/artifacts/master/install | bash
   - ls $ARTIFACTS_PATHS
   - artifacts upload
 
