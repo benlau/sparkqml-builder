@@ -30,9 +30,10 @@ script:
   - git clone https://github.com/benlau/qtci.git
   - source qtci/path.env
   - export PATH=$BINDIR:$PATH
+  - export ARTIFACTS_PATHS=$ROOTDIR/artifacts
+  - mkdir -p $ROOTDIR/artifacts
   - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then ./build-osx.sh; fi
   - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then ./build-linux.sh; fi
-  - export ARTIFACTS_PATHS=$ROOTDIR/artifacts
   - ls $ARTIFACTS_PATHS
   - curl -sL https://raw.githubusercontent.com/travis-ci/artifacts/master/install | bash
   - export ARTIFACTS_TARGET_PATHS="artifacts"
