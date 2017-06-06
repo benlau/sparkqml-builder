@@ -24,6 +24,7 @@ script:
   - export ROOTDIR=`pwd`
   - export SRCDIR=`pwd`/sparkqml/app/sparkqml
   - export BUILDDIR=`pwd`/build/sparkqml
+  - export INSTALLDIR=`pwd`/build/sparkqml-install
   - export BINDIR=`pwd`/bin
   - mkdir -p $BINDIR
   - git clone https://github.com/benlau/qtci.git

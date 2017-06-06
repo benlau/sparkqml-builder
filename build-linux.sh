@@ -9,7 +9,6 @@ sudo apt-get install patchelf
 sudo apt-get install libgstreamer-plugins-base0.10-0
 sudo apt-get install libpulse-mainloop-glib0
 
-ROOTDIR=`pwd`
 ./install-qt-5.9
 
 cat ./qt-5.9.env
@@ -24,7 +23,7 @@ which qmake
 ./install-linuxdeployqt.sh
 ./build-app.sh
 
-cd $BUILDDIR
+find $BUILDDIR
 cd $SRCDIR
 ls
 ldd $BUILDDIR/SparkQML
