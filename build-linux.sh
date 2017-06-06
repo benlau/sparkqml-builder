@@ -33,6 +33,8 @@ find $BUILDDIR \( -name "moc_*" -or -name "*.o" -or -name "qrc_*" -or -name "Mak
 echo $SRCDIR
 LD_LIBRARY_PATH=/usr/lib/x86_64-linux-gnu/:/usr/lib/x86_64-linux-gnu/pulseaudio linuxdeployqt $BUILDDIR/SparkQML -bundle-non-qt-libs -appimage -qmldir=$SRCDIR
 
+find $BUILDDIR
+
 ls
 mkdir -p $ROOTDIR/artifacts
 cp Application-x86_64.AppImage $ROOTDIR/artifacts/SparkQML.AppImage
