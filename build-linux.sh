@@ -18,8 +18,6 @@ ls Qt
 ls Qt/5.9
 ls Qt/5.9/gcc_64
 
-tree -d Qt
-
 which qmake
 
 ./install-linuxdeployqt.sh
