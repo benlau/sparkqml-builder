@@ -12,7 +12,7 @@ ROOTDIR=`pwd`
 ./install-qt-5.9
 
 cat ./qt-5.9.env
-source ./qt-5.9.env
+. ./qt-5.9.env
 
 which qmake
 
