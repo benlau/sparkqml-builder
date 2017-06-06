@@ -9,10 +9,10 @@ sudo apt-get install patchelf
 sudo apt-get install libgstreamer-plugins-base0.10-0
 
 ROOTDIR=`pwd`
-./qtci/recipes/qt-5.7
+install-qt-5.9
 
-cat ./qt-5.7.env
-. ./qt-5.7.env
+cat ./qt-5.9.env
+source ./qt-5.9.env
 
 which qmake
 

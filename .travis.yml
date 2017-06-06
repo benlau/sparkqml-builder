@@ -19,7 +19,6 @@ before_install:
   - export GOPATH=`pwd`/gosrc
   - export PATH=`pwd`/gosrc/bin:$PATH
   - go get qpm.io/qpm
-  - find $GOPATH
 script:
   - echo $TRAVIS_OS_NAME
   - export ROOTDIR=`pwd`
