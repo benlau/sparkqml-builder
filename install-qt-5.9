@@ -1,11 +1,15 @@
 #!/bin/sh
 
 echo Downloading Qt
-INSTALLER=qt-opensource-linux-x64-5.9.0.run
+
+DOWNLOAD_URL=https://download.qt.io/archive/online_installers/3.0/qt-unified-linux-x64-3.0.0-online.run
+INSTALLER=`basename $DOWNLOAD_URL`
 ENVFILE=qt-5.9.env
-wget -c https://download.qt.io/archive/qt/5.9/5.9.0/qt-opensource-linux-x64-5.9.0.run
+
+wget -c $DOWNLOAD_URL
+
 echo Installing Qt
-extract-qt-installer $PWD/$INSTALLER $PWD/Qt
+QT_CI_PACKAGES="qt.59.gcc_64" extract-qt-installer $PWD/$INSTALLER $PWD/Qt
 
 echo Create $ENVFILE
 cat << EOF > $ENVFILE
