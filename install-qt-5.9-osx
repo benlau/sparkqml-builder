@@ -6,7 +6,8 @@ echo Downloading Qt
 set -v
 set -e
 
-DOWNLOAD_URL=https://download.qt.io/archive/qt/5.9/5.9.0/qt-opensource-mac-x64-5.9.0.dmg
+DOWNLOAD_URL=https://download.qt.io/archive/online_installers/3.0/qt-unified-mac-x64-3.0.0-online.dmg
+export QT_CI_PACKAGES=qt.59.clang_64
 INSTALLER=`basename $DOWNLOAD_URL`
 INSTALLER_NAME=${INSTALLER%.*}
 ENVFILE=qt-5.9.0-osx.env
@@ -18,9 +19,9 @@ wget -c $DOWNLOAD_URL
 hdiutil mount ${INSTALLER}
 ls /Volumes
 echo Installing Qt
-extract-qt-installer $APPFILE $PWD/Qt
+VERBOSE=true extract-qt-installer $APPFILE $PWD/Qt
 
 echo Create $ENVFILE
 cat << EOF > $ENVFILE
-export PATH=$PWD/Qt/5.7/clang_64/bin:$PATH
+export PATH=$PWD/Qt/5.9/clang_64/bin:$PATH
 EOF

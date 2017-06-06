@@ -3,7 +3,7 @@ sudo: true
 dist: trusty
 sudo: required
 os:
-  - linux
+#  - linux
   - osx
 addons:
   - apt:
