@@ -23,17 +23,18 @@ which qmake
 ./install-linuxdeployqt.sh
 ./build-app.sh
 
-find $BUILDDIR
-cd $SRCDIR
-ls
-ldd $BUILDDIR/SparkQML
+#find $BUILDDIR
+#cd $SRCDIR
+#ls
+ldd $INSTALLDIR/SparkQML
 
-find $BUILDDIR \( -name "moc_*" -or -name "*.o" -or -name "qrc_*" -or -name "Makefile*" -or -name "*.a" \) -exec rm {} \;
+#find $BUILDDIR \( -name "moc_*" -or -name "*.o" -or -name "qrc_*" -or -name "Makefile*" -or -name "*.a" \) -exec rm {} \;
 
-echo $SRCDIR
-LD_LIBRARY_PATH=/usr/lib/x86_64-linux-gnu/:/usr/lib/x86_64-linux-gnu/pulseaudio linuxdeployqt $BUILDDIR/SparkQML -bundle-non-qt-libs -appimage -qmldir=$SRCDIR
+#echo $SRCDIR
 
-find $BUILDDIR
+LD_LIBRARY_PATH=/usr/lib/x86_64-linux-gnu/:/usr/lib/x86_64-linux-gnu/pulseaudio linuxdeployqt $INSTALLDIR/SparkQML -bundle-non-qt-libs -appimage -qmldir=$SRCDIR
+
+find $INSTALLDIR
 
 ls
 mkdir -p $ROOTDIR/artifacts
