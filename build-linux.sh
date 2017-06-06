@@ -9,7 +9,7 @@ sudo apt-get install patchelf
 sudo apt-get install libgstreamer-plugins-base0.10-0
 
 ROOTDIR=`pwd`
-install-qt-5.9
+./install-qt-5.9
 
 cat ./qt-5.9.env
 source ./qt-5.9.env
