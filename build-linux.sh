@@ -14,6 +14,8 @@ ROOTDIR=`pwd`
 cat ./qt-5.9.env
 . ./qt-5.9.env
 
+tree -d Qt
+
 which qmake
 
 ./install-linuxdeployqt.sh
