@@ -7,6 +7,7 @@ sudo add-apt-repository "deb http://us.archive.ubuntu.com/ubuntu vivid main univ
 sudo apt-get update
 sudo apt-get install patchelf
 sudo apt-get install libgstreamer-plugins-base0.10-0
+sudo apt-get install libpulse-mainloop-glib0
 
 ROOTDIR=`pwd`
 ./install-qt-5.9
@@ -30,6 +31,7 @@ ldd $BUILDDIR/SparkQML
 
 find $BUILDDIR \( -name "moc_*" -or -name "*.o" -or -name "qrc_*" -or -name "Makefile*" -or -name "*.a" \) -exec rm {} \;
 
+echo $SRCDIR
 LD_LIBRARY_PATH=/usr/lib/x86_64-linux-gnu/:/usr/lib/x86_64-linux-gnu/pulseaudio linuxdeployqt $BUILDDIR/SparkQML -bundle-non-qt-libs -appimage -qmldir=$SRCDIR
 
 ls
