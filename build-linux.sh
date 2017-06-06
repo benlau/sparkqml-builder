@@ -14,6 +14,10 @@ ROOTDIR=`pwd`
 cat ./qt-5.9.env
 . ./qt-5.9.env
 
+ls Qt
+ls Qt/5.9
+ls Qt/5.9/gcc_64
+
 tree -d Qt
 
 which qmake
