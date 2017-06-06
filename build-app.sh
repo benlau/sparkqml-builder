@@ -1,6 +1,9 @@
 #!/bin/sh
 # This script is shared between OSX and Linux build
 
+set -v
+set -e
+
 git clone https://github.com/benlau/sparkqml.git
 (cd $SRCDIR;qpm install)
 mkdir -p build/sparkqml
