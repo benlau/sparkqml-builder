@@ -26,6 +26,7 @@ which qmake
 #find $BUILDDIR
 #cd $SRCDIR
 #ls
+find $INSTALLDIR
 ldd $INSTALLDIR/SparkQML
 
 #find $BUILDDIR \( -name "moc_*" -or -name "*.o" -or -name "qrc_*" -or -name "Makefile*" -or -name "*.a" \) -exec rm {} \;
