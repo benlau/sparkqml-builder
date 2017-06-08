@@ -10,4 +10,4 @@ mkdir -p build/sparkqml
 cd build/sparkqml
 qmake $SRCDIR/sparkqml.pro
 make
-make INSTALL_ROOT=${INSTALLDIR} install
+make INSTALL_ROOT=${INSTALLDIR} PREFIX=/ install
