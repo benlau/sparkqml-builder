@@ -8,6 +8,6 @@ git clone https://github.com/benlau/sparkqml.git
 (cd $SRCDIR;qpm install)
 mkdir -p build/sparkqml
 cd build/sparkqml
-qmake $SRCDIR/sparkqml.pro
+qmake $SRCDIR/sparkqml.pro PREFIX=/
 make
-make INSTALL_ROOT=${INSTALLDIR} PREFIX=/ install
+make INSTALL_ROOT=${INSTALLDIR} install
